@@ -2,12 +2,14 @@
   "name": "christmas-shop",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://alexk547.github.io/christmas-shop",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -21,6 +23,7 @@
     "eslint": "^9.13.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
+    "gh-pages": "^6.2.0",
     "globals": "^15.11.0",
     "sass": "^1.81.0",
     "typescript": "~5.6.2",
