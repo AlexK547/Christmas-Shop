@@ -1,0 +1,67 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1440px;
+    height: 524px;
+    background: var(--static-white);
+    background-image: url("/images/png/hero-section-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 12px;
+        width: 430px;
+        height: 404px;
+    }
+
+    &__text {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0.05em;
+        text-align: center;
+        color: var(--static-white);
+    }
+
+    &__title {
+        width: 100%;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 150%;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--static-white);
+    }
+
+    &__btn {
+        border-radius: 20px;
+        width: 235px;
+        height: 56px;
+        background: var(--dark);
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--static-white);
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        @media not all and (hover: none) {
+            &:hover {
+                background: var(--static-white);
+                color: var(--dark);
+            }
+        }
+    }
+}
