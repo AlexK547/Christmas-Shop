@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     width: 1440px;
-    height: 64px;
+    height: 80px;
     background: var(--static-white);
 
     &__wrapper {
@@ -20,7 +20,7 @@
     padding: 0 20px;
 
     &__title {
-        height: 14px;
+        width: 100px;
         padding-left: 8px;
         font-family: var(--font-family);
         font-weight: 600;
@@ -43,7 +43,6 @@
     }
     li {
         padding: 0 20px;
-        width: 78px;
         height: 40px;
         display: flex;
         align-items: center;
@@ -57,5 +56,21 @@
         letter-spacing: 0.05em;
         text-transform: uppercase;
         color: var(--dark);
+    }
+}
+
+.search {
+
+    &__input {
+        padding: 12px 20px;
+        border: none;
+        background: var(--search-input);
+        outline: none;
+        margin-right: 20px;
+        border-radius: 5px;
+        width: 20rem;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
     }
 }
