@@ -1,13 +1,10 @@
-import About from "../about/About";
-import Hero from "../hero/Hero";
-import Slider from "../slider/Slider";
+import Categories from "../categories/Categories";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <About />
-      <Slider />
+      <Categories />
+      <div style={{height: "3000px"}}></div>
     </main>
   );
 }
