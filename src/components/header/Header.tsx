@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./styles.module.scss";
 import snowflakeIMG from "/images/svg/snowflake.svg";
+import { MdOutlineSearch } from "react-icons/md";
 
 function Header() {
   return (
@@ -17,6 +18,15 @@ function Header() {
             type="text"
             // value=""
             placeholder="Поиск"
+          />
+
+          <MdOutlineSearch
+            style={{
+              position: "absolute",
+              right: "30px",
+              top: "10px",
+            }}
+            size={20}
           />
         </div>
 
