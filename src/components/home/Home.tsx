@@ -1,10 +1,17 @@
 import Categories from "../categories/Categories";
+import { ICardProps } from "../../interfaces/ICardProps";
+import { Products } from "../products/Products";
 
-export default function Home() {
+interface HomeProps {
+  data: ICardProps[];
+}
+
+export const Home = ({ data }: HomeProps) => {
   return (
     <main>
       <Categories />
-      <div style={{height: "3000px"}}></div>
+      <Products data={data} />
+      <div style={{ height: "3000px" }}></div>
     </main>
   );
-}
+};

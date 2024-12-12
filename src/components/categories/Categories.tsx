@@ -15,8 +15,8 @@ export default function Categories() {
       <div className={styles.categories__container}>
         <div className={styles.categories__items}>
           <Link key={1} className={styles.categories__item} to="#">
-            <TbChristmasTree size={30}/>
-            <p>искуственны елки</p>
+            <TbChristmasTree size={30} />
+            искуственные елки
           </Link>
           <Link key={2} className={styles.categories__item} to="#">
             <TbChristmasTreeFilled size={30} />
