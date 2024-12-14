@@ -12,6 +12,7 @@
     --static-white-40: rgba(255, 255, 255, 0.4);
     --bg-categories: #e5e7eb;
     --bg-categories-hover: #94ceb8;
+    --bg-common: #f3ece5;
     --overlay: rgba(24, 28, 41, 0.8);
 
     --font-family: "Montserrat", sans-serif;
@@ -26,7 +27,7 @@ body {
     font-family: "Inter", sans-serif;
     display: flex;
     justify-content: center;
-    background: #e1d4c9;
+    background: var(--bg-common);
 }
 
 #root {
@@ -37,4 +38,12 @@ a {
 }
 li {
     list-style-type: none;
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

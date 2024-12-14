@@ -1,6 +1,6 @@
-import Categories from "../categories/Categories";
+import Categories from "../../components/categories/Categories";
 import { ICardProps } from "../../interfaces/ICardProps";
-import { Products } from "../products/Products";
+import { Products } from "../../components/products/Products";
 
 interface HomeProps {
   data: ICardProps[];
@@ -11,7 +11,7 @@ export const Home = ({ data }: HomeProps) => {
     <main>
       <Categories />
       <Products data={data} />
-      <div style={{ height: "3000px" }}></div>
+
     </main>
   );
 };

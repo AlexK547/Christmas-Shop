@@ -8,8 +8,10 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.header__wrapper}>
         <div className={styles.logo}>
-          <img src={snowflakeIMG} alt="snowflake" />
-          <h1 className={styles.logo__title}>Магазин новогодних подарков</h1>
+          <Link className={styles.logo} to="/">
+            <img src={snowflakeIMG} alt="snowflake" />
+            <h1 className={styles.logo__title}>Магазин новогодних подарков</h1>
+          </Link>
         </div>
 
         <div className={styles.search}>
@@ -33,17 +35,17 @@ function Header() {
         <nav className={styles.navigation}>
           <ul className={styles.navigation__items}>
             <li>
-              <Link className={styles.navigation__item} to="#">
+              <Link className={styles.navigation__item} to="/">
                 Подарки
               </Link>
             </li>
             <li>
-              <Link className={styles.navigation__item} to="#">
+              <Link className={styles.navigation__item} to="/about">
                 О компании
               </Link>
             </li>
             <li>
-              <Link className={styles.navigation__item} to="#">
+              <Link className={styles.navigation__item} to="/contacts">
                 Контакты
               </Link>
             </li>
