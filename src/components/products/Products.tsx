@@ -10,7 +10,7 @@ interface ProductsProps {
 const Products: React.FC<ProductsProps> = ({ data }) => {
   return (
     <section className={styles.products}>
-      {data.map((item) => (
+      {data.length != 0 && data.map((item) => (
         <Card
           key={item.id}
           id={item.id}
@@ -24,6 +24,9 @@ const Products: React.FC<ProductsProps> = ({ data }) => {
           category={item.category}
         />
       ))}
+      {data.length == 0 && (
+        <div className={styles.products__notfound}>Товар не найден</div>
+      )}
     </section>
   );
 };

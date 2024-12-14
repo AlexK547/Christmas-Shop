@@ -27,9 +27,11 @@
         line-height: 130%;
         letter-spacing: 0.05em;
         text-transform: uppercase;
+        text-align: left;
         color: var(--dark);
         padding: 10px;
         border-radius: 15px;
+        border: none;
         background-color: var(--bg-categories);
         display: flex;
         align-items: center;
@@ -37,8 +39,10 @@
         column-gap: 10px;
         transition: background-color 0.3s ease;
 
-        &:hover {
-            background-color: var(--bg-categories-hover);
+        @media not all and (hover: none) {
+            &:hover {
+                background-color: var(--bg-categories-hover);
+            }
         }
     }
 }

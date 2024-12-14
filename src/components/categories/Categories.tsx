@@ -24,7 +24,8 @@ const Categories: React.FC<CategoriesProps> = ({ changeCategory }) => {
           <button
             className={styles.categories__item}
             onClick={clickBtn}
-            value={"все"}
+            value={"все категории"}
+            type="button"
           >
             <TbChristmasTree size={30} />
             Все категории
@@ -33,6 +34,7 @@ const Categories: React.FC<CategoriesProps> = ({ changeCategory }) => {
             className={styles.categories__item}
             onClick={clickBtn}
             value={"искуственные елки"}
+            type="button"
           >
             <TbChristmasTree size={30} />
             искуственные елки
@@ -41,6 +43,7 @@ const Categories: React.FC<CategoriesProps> = ({ changeCategory }) => {
             className={styles.categories__item}
             onClick={clickBtn}
             value={"естественные елки"}
+            type="button"
           >
             <TbChristmasTreeFilled size={30} />
             естественные елки
@@ -49,6 +52,7 @@ const Categories: React.FC<CategoriesProps> = ({ changeCategory }) => {
             className={styles.categories__item}
             onClick={clickBtn}
             value={"пластиковые шары"}
+            type="button"
           >
             <PiDiscoBall size={30} />
             пластиковые шары
@@ -57,6 +61,7 @@ const Categories: React.FC<CategoriesProps> = ({ changeCategory }) => {
             className={styles.categories__item}
             onClick={clickBtn}
             value={"стеклянные шары"}
+            type="button"
           >
             <GiGlassBall size={30} />
             стеклянные шары
@@ -65,6 +70,7 @@ const Categories: React.FC<CategoriesProps> = ({ changeCategory }) => {
             className={styles.categories__item}
             onClick={clickBtn}
             value={"елочные украшения"}
+            type="button"
           >
             <TbChristmasBall size={30} />
             елочные украшения
@@ -73,6 +79,7 @@ const Categories: React.FC<CategoriesProps> = ({ changeCategory }) => {
             className={styles.categories__item}
             onClick={clickBtn}
             value={"эдектрогерлянды"}
+            type="button"
           >
             <RiLightbulbFlashLine size={30} />
             эдектрогерлянды
