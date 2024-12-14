@@ -3,16 +3,14 @@ import styles from "./styles.module.scss";
 import snowflakeIMG from "/images/svg/snowflake.svg";
 import { MdOutlineSearch } from "react-icons/md";
 
-function Header() {
+const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.header__wrapper}>
-        <div className={styles.logo}>
-          <Link className={styles.logo} to="/">
-            <img src={snowflakeIMG} alt="snowflake" />
-            <h1 className={styles.logo__title}>Магазин новогодних подарков</h1>
-          </Link>
-        </div>
+        <Link className={styles.logo} to="/">
+          <img src={snowflakeIMG} alt="snowflake" />
+          <h1 className={styles.logo__title}>Магазин новогодних подарков</h1>
+        </Link>
 
         <div className={styles.search}>
           <input
@@ -54,6 +52,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

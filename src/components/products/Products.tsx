@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "../card/Card";
+import Card from "../card/Card";
 import { ICardProps } from "../../interfaces/ICardProps";
 import styles from "./styles.module.scss";
 
@@ -7,7 +7,7 @@ interface ProductsProps {
   data: ICardProps[];
 }
 
-export const Products: React.FC<ProductsProps> = ({ data }) => {
+const Products: React.FC<ProductsProps> = ({ data }) => {
   return (
     <section className={styles.products}>
       {data.map((item) => (
@@ -27,3 +27,5 @@ export const Products: React.FC<ProductsProps> = ({ data }) => {
     </section>
   );
 };
+
+export default Products;

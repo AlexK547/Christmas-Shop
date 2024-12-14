@@ -15,7 +15,7 @@ interface CardProps {
   category?: string;
 }
 
-export const Card: React.FC<CardProps> = ({
+const Card: React.FC<CardProps> = ({
   srcImg,
   title,
   rate,
@@ -26,7 +26,7 @@ export const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div className={styles.card}>
-      <img src={srcImg[2]} alt="image" />
+      <img src={srcImg[0]} alt="image" />
       <div className={styles.card__content}>
         <div className={styles.card__prices}>
           <p className={styles["card__prices-new"]}>{newPrice}</p>
@@ -49,3 +49,5 @@ export const Card: React.FC<CardProps> = ({
     </div>
   );
 };
+
+export default Card;
