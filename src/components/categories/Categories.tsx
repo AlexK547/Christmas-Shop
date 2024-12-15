@@ -2,7 +2,6 @@ import styles from "./styles.module.scss";
 import {
   TbChristmasBall,
   TbChristmasTree,
-  TbChristmasTreeFilled,
 } from "react-icons/tb";
 import { GiGlassBall } from "react-icons/gi";
 import { PiDiscoBall } from "react-icons/pi";
@@ -42,15 +41,6 @@ const Categories: React.FC<CategoriesProps> = ({ changeCategory }) => {
           <button
             className={styles.categories__item}
             onClick={clickBtn}
-            value={"естественные елки"}
-            type="button"
-          >
-            <TbChristmasTreeFilled size={30} />
-            естественные елки
-          </button>
-          <button
-            className={styles.categories__item}
-            onClick={clickBtn}
             value={"пластиковые шары"}
             type="button"
           >
@@ -82,7 +72,7 @@ const Categories: React.FC<CategoriesProps> = ({ changeCategory }) => {
             type="button"
           >
             <RiLightbulbFlashLine size={30} />
-            эдектрогерлянды
+            электрогерлянды
           </button>
         </div>
       </div>

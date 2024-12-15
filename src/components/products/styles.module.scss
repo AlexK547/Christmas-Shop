@@ -1,9 +1,10 @@
 .products {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1440px;
-    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 16rem;
+    padding: 2rem;
     background: var(--static-white);
 
     &__notfound {

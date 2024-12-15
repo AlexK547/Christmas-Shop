@@ -1,22 +1,26 @@
-import Categories from "../../components/categories/Categories";
 import { ICardProps } from "../../interfaces/ICardProps";
 import Products from "../../components/products/Products";
 import Slider from "../../components/slider/Slider";
 import { useEffect, useState } from "react";
+import Sidebar from "../../components/sidebar/Sidebar";
 
 interface HomeProps {
   data: ICardProps[];
 }
 
 const Home: React.FC<HomeProps> = ({ data }) => {
-  const [selectedCategory, setSelectedCategory] = useState("искуственные елки");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [result, setResult] = useState(data);
+
+  const handleChange: Function = (event: any) => {
+    setSelectedCategory(event.target.value);
+  };
 
   useEffect(() => {
     function filteredData(products: ICardProps[], selected: string) {
       let filteredProducts = products;
 
-      if (!selected.includes("все")) {
+      if (selected) {
         filteredProducts = filteredProducts.filter(
           ({ category }) => category === selected
         );
@@ -31,7 +35,7 @@ const Home: React.FC<HomeProps> = ({ data }) => {
   return (
     <main>
       <Slider />
-      <Categories changeCategory={setSelectedCategory} />
+      <Sidebar handleChange={handleChange} />
       <Products data={result} />
     </main>
   );
