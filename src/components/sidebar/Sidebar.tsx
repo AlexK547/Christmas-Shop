@@ -18,7 +18,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleChange }) => {
             value=""
             name="categories"
           />
-          Все категирии
+          Все категории
         </label>
         <label className={styles.sidebar__item}>
           <input
@@ -27,7 +27,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleChange }) => {
             value="искуственные елки"
             name="categories"
           />
-          Искуственные елки
+          Искуственные ёлки
         </label>
         <label className={styles.sidebar__item}>
           <input
@@ -54,7 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleChange }) => {
             value="елочные украшения"
             name="categories"
           />
-          Елочные украшения
+          Ёлочные украшения
         </label>
         <label className={styles.sidebar__item}>
           <input
