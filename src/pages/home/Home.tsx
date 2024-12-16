@@ -9,16 +9,21 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ data }) => {
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [result, setResult] = useState(data);
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [result, setResult] = useState<ICardProps[]>(data);
 
-  const handleChange: Function = (event: any) => {
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (
+    event
+  ): void => {
     setSelectedCategory(event.target.value);
   };
 
   useEffect(() => {
-    function filteredData(products: ICardProps[], selected: string) {
-      let filteredProducts = products;
+    function filteredData(
+      products: ICardProps[],
+      selected: string
+    ): ICardProps[] {
+      let filteredProducts: ICardProps[] = products;
 
       if (selected) {
         filteredProducts = filteredProducts.filter(

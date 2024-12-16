@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 
 interface SidebarProps {
-  handleChange: any;
+  handleChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ handleChange }) => {

@@ -9,15 +9,20 @@ const Slider: React.FC = () => {
   const [sliderPosition, setSliderPosition] = useState<number>(0);
   const [isSelectBtnLeft, setIsSelectBtnLeft] = useState<boolean>(false);
   const [isSelectBtnRight, setIsSelectBtnRight] = useState<boolean>(true);
-  const STEP: number = 270;
+  const STEP: number = 540;
 
-  const changePositionLeft = () => {
+  const changePositionLeft: React.MouseEventHandler<
+    HTMLButtonElement
+  > = (): void => {
     if (sliderPosition < 0) {
       setSliderPosition(sliderPosition + STEP);
       setIsSelectBtnRight(true);
     }
   };
-  const changePositionRight = () => {
+
+  const changePositionRight: React.MouseEventHandler<
+    HTMLButtonElement
+  > = (): void => {
     if (sliderPosition > -1000) {
       setSliderPosition(sliderPosition - STEP);
       setIsSelectBtnLeft(true);
