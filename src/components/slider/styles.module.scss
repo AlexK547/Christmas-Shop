@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     width: 1440px;
-    height: 350px;
+    padding: 20px 0;
     background: var(--static-white);
     background-image: url("/images/png/slider-section-bg.png");
     background-size: cover;
@@ -37,67 +37,47 @@
         height: 200px;
         align-self: flex-start;
         display: flex;
+        overflow: hidden;
 
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            // width: 2922px;
+            animation: running-slider 10s linear infinite;
+        }
+        &__items {
+            display: flex;
+            justify-content: space-between;
+            // width: 1461px;
+        }
         &__card {
             display: flex;
             align-items: center;
+            column-gap: 20px;
+            padding-right: 20px;
 
             &-text {
-                margin-right: 20px;
                 font-family: var(--font-family);
                 font-weight: 600;
-                font-size: 80px;
+                font-size: 40px;
                 text-transform: uppercase;
                 text-align: center;
-                color: #fff;
+                color: var(--static-white);;
             }
             &-img {
-                margin-right: 20px;
                 border-radius: 20px;
-                width: 200px;
-                height: 200px;
+                width: 150px;
+                height: 150px;
             }
         }
     }
+}
 
-    .buttons {
-        width: 1276px;
-        height: 56px;
-        display: flex;
-        justify-content: flex-end;
-
-        &__item {
-            background-color: inherit;
-            border: 1px solid var(--static-white-40);
-            border-radius: 20px;
-            width: 56px;
-            height: 56px;
-            &:first-child {
-                margin-right: 20px;
-            }
-
-            svg path {
-                stroke-opacity: 0.4;
-            }
-        }
-        &__item_active {
-            border: 1px solid var(--static-white);
-
-            svg path {
-                stroke-opacity: 1;
-            }
-            cursor: pointer;
-            transition: all 0.5s ease;
-
-            @media not all and (hover: none) {
-                &:hover {
-                    background: var(--static-white);
-                    svg path {
-                        stroke-opacity: 1;
-                        stroke: var(--primary);
-                    }
-                }
-            }
-        }
+@keyframes running-slider {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
     }
 }
